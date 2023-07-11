@@ -25,7 +25,7 @@ echo >&2 "Crate $CRATE_NAME current version: $CURRENT_VERSION"
 EXISTING_VERSIONS="
 $( \
     curl 2>/dev/null "https://crates.io/api/v1/crates/$CRATE_NAME" | \
-    jq --exit-status -r .versions[].num \
+    jq --exit-status -r .versions[].num || echo "none" \
 )"
 echo >&2 -e "Versions on crates.io:$EXISTING_VERSIONS\n"
 
