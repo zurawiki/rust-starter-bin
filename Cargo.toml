@@ -1,0 +1,21 @@
+[package]
+name = "rust-starter-bin"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.70.0"
+authors = ["Roger Zurawicki <roger@zura.wiki>"]
+categories = ["cli"]
+keywords = []
+description = "A starter project for Rust binaries"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/zurawiki/rust-starter-bin"
+repository = "https://github.com/zurawiki/rust-starter-bin"
+documentation = "https://docs.rs/rust-starter-bin"
+
+
+[dependencies]
+anyhow = "1.0.71"
+clap = { version = "4.3.11", features = ["derive"] }
+tokio = {version = "1.29.1", features = ["full"]}
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"]}
